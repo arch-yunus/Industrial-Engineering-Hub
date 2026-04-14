@@ -18,7 +18,7 @@ def calculate_rop(average_daily_demand, lead_time, safety_stock=0):
     return (average_daily_demand * lead_time) + safety_stock
 
 def main():
-    print("--- 🏭 Endüstri Mühendisliği Karar Destek Sistemi: Stok Optimizasyonu ---")
+    print("--- ⚙️ Endüstri Mühendisliği Karar Destek Sistemi: Stok Optimizasyonu ---")
     
     try:
         # EOQ Inputs
@@ -42,14 +42,14 @@ def main():
         # Output
         print("\n" + "="*50)
         print(f"📊 SONUÇLAR:")
-        print(f"✅ Ekonomik Sipariş Miktarı (EOQ): {eoq:.2f} birim")
-        print(f"✅ Yeniden Sipariş Noktası (ROP): {rop:.2f} birim")
-        print(f"✅ Yıllık Toplam Stok Maliyeti: {total_annual_cost:.2f} ₺")
-        print(f"✅ Yıllık Sipariş Sayısı: {D/eoq:.2f}")
+        print(f"🔹 Ekonomik Sipariş Miktarı (EOQ): {eoq:.2f} birim")
+        print(f"🔹 Yeniden Sipariş Noktası (ROP): {rop:.2f} birim")
+        print(f"🔹 Yıllık Toplam Stok Maliyeti: {total_annual_cost:.2f} ₺")
+        print(f"🔹 Yıllık Sipariş Sayısı: {D/eoq:.2f}")
         print("="*50)
         
     except ValueError:
-        print("❌ Hata: Lütfen geçerli sayısal değerler giriniz.")
+        print("🛑 Hata: Lütfen geçerli sayısal değerler giriniz.")
 
 if __name__ == "__main__":
     main()

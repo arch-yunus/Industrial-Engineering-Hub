@@ -1,5 +1,5 @@
 """
-🚀 Industrial-Engineering-Hub: Systems Simulation
+🏭 Industrial-Engineering-Hub: Systems Simulation
 Factory Production Line Discrete Event Simulation (SimPy)
 """
 
@@ -37,9 +37,9 @@ class Factory(object):
         # Step 2: Operator Handling
         with self.operator.request() as request:
             yield request
-            print(f"👤 Operatör {part_name} ile ilgileniyor: {self.env.now:.2f}")
+            print(f"👨‍🔧 Operatör {part_name} ile ilgileniyor: {self.env.now:.2f}")
             yield self.env.timeout(OPERATOR_TIME)
-            print(f"🏁 {part_name} hattan çıktı: {self.env.now:.2f}")
+            print(f"🚀 {part_name} hattan çıktı: {self.env.now:.2f}")
 
 def part_generator(env, factory):
     """Generates new parts that arrive at the factory."""
@@ -48,7 +48,7 @@ def part_generator(env, factory):
         env.process(factory.process_part(f"Parça-{i+1}"))
 
 def main():
-    print("--- 🏭 Endüstri Mühendisliği Karar Destek Sistemi: Fabrika Simülasyonu ---")
+    print("--- ⚙️ Endüstri Mühendisliği Karar Destek Sistemi: Fabrika Simülasyonu ---")
     print(f"Simülasyon parametreleri: Makine Süresi={MACHINE_TIME}, Operatör Süresi={OPERATOR_TIME}")
     
     # Setup and start the simulation
@@ -59,7 +59,7 @@ def main():
     env.process(part_generator(env, factory))
 
     # Run!
-    print("🚀 Simülasyon başlatılıyor...\n")
+    print("🛰️ Simülasyon başlatılıyor...\n")
     env.run(until=SIM_TIME)
     print("\n🏁 Simülasyon tamamlandı.")
 

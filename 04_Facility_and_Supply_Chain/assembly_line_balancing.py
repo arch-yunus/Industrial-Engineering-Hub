@@ -1,5 +1,5 @@
 """
-⚙️ Industrial-Engineering-Hub: Facility Planning Tool
+🏗️ Industrial-Engineering-Hub: Facility Planning Tool
 Assembly Line Balancing (Largest Candidate Rule Heuristic)
 """
 
@@ -35,7 +35,7 @@ def balance_line(tasks, task_times, cycle_time):
     return stations
 
 def main():
-    print("--- 🏭 Endüstri Mühendisliği Karar Destek Sistemi: Montaj Hattı Dengeleme ---")
+    print("--- ⚙️ Endüstri Mühendisliği Karar Destek Sistemi: Montaj Hattı Dengeleme ---")
     
     # Example Dataset
     example_tasks = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
@@ -43,7 +43,7 @@ def main():
         'A': 4, 'B': 3, 'C': 2, 'D': 5, 'E': 1, 'F': 4, 'G': 3
     }
     
-    print(f"Örnek Görevler ve Süreleri: {example_times}")
+    print(f"📌 Örnek Görevler ve Süreleri: {example_times}")
     
     try:
         user_cycle_time = float(input("Çevrim Süresi (Cycle Time) değerini giriniz: "))
@@ -55,17 +55,17 @@ def main():
         total_time = sum(example_times.values())
         
         for i, (sts, t) in enumerate(result_stations):
-            print(f"📍 İstasyon {i+1}: Görevler {sts} | Toplam Süre: {t}")
+            print(f"🟢 İstasyon {i+1}: Görevler {sts} | Toplam Süre: {t}")
             
         n_stations = len(result_stations)
         efficiency = (total_time / (n_stations * user_cycle_time)) * 100
         
-        print(f"\n✅ İstasyon Sayısı: {n_stations}")
-        print(f"✅ Hat Verimliliği: %{efficiency:.2f}")
+        print(f"\n🔹 İstasyon Sayısı: {n_stations}")
+        print(f"🔹 Hat Verimliliği: %{efficiency:.2f}")
         print("="*50)
         
     except ValueError:
-        print("❌ Hata: Lütfen geçerli bir sayısal değer giriniz.")
+        print("🛑 Hata: Lütfen geçerli bir sayısal değer giriniz.")
 
 if __name__ == "__main__":
     main()
