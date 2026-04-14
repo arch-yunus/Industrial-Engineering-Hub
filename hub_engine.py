@@ -12,10 +12,10 @@ def clear_screen():
 def print_banner():
     print("""
     ========================================================
-    🏗️  INDUSTRIAL ENGINEERING MASTER HUB ENGINE v3.0
+    🏗️  INDUSTRIAL ENGINEERING MASTER HUB ENGINE v4.0
     ========================================================
-    Sistem Mimarisi, AI ve İleri Optimizasyon Ekosistemi
-    "Sadece sistemleri tasarlamaz, onları zekayla donatırız."
+    Sistem Mimarisi, AI ve Stratejik Yönetim Ekosistemi
+    "Sadece bugünü değil, sistemin geleceğini de kurgularız."
     ========================================================
     """)
 
@@ -32,6 +32,9 @@ def main_menu():
         print(" [6] 🧠 Karar Bilimi (AHP/TOPSIS)")
         print(" [7] 🌀 Sistem Dinamiği & Karmaşıklık")
         print(" [8] 🛰️ Zeka & Veri Analitiği (AI)")
+        print(" [9] 🏮 Yalın Üretim & TPS (Kanban)")
+        print(" [10]💰 Mühendislik Ekonomisi (NPV/Finans)")
+        print(" [11]🛠️ Güvenilirlik & Bakım Yönetimi")
         print(" [Q] ❌ Çıkış")
         print("-" * 56)
         
@@ -58,6 +61,12 @@ def main_menu():
             run_tool('07_System_Dynamics_and_Complexity/bullwhip_simulator.py')
         elif choice == '8':
             run_tool('02_Production_Planning/ai_demand_forecaster.py')
+        elif choice == '9':
+            run_tool('09_Lean_Manufacturing/kanban_calculator.py')
+        elif choice == '10':
+            run_tool('10_Engineering_Economics/investment_appraisal.py')
+        elif choice == '11':
+            run_tool('11_Reliability_and_Maintenance/system_reliability_calc.py')
         else:
             input("Geçersiz seçim. Devam etmek için Enter'a basın...")
 
