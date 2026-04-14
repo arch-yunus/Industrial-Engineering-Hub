@@ -1,119 +1,101 @@
-# Industrial-Engineering-Hub 🏗️: Sistem Mimarisi ve Optimizasyon Külliyatı
+# Industrial-Engineering-Hub 🏭: Endüstriyel Karar Destek ve Optimizasyon Ekosistemi
 
 [![Discipline: Industrial Engineering](https://img.shields.io/badge/Discipline-Industrial%20Engineering-darkred.svg)]()
 [![Paradigm: Systems Thinking](https://img.shields.io/badge/Paradigm-Systems%20Thinking-blue.svg)]()
 [![Complexity: Advanced](https://img.shields.io/badge/Complexity-Advanced-purple.svg)]()
 [![Status: Maintained](https://img.shields.io/badge/Status-Maintained-success.svg)]()
 
-> "Mühendisler bir şeyler yapar; Endüstri Mühendisleri ise o şeyleri daha iyi yapar."
+> "Mühendisler bir şeyler yapar; Endüstri Mühendisleri ise o şeyleri **daha iyi** yapar."
 
-## 🎯 Manifesto ve Amacımız
-**Industrial-Engineering-Hub**, insan, makine, malzeme, bilgi ve enerjiden oluşan entegre sistemlerin tasarımı, iyileştirilmesi ve kurulması ile ilgilenen **Endüstri Mühendisliği (IE)** disiplininin açık kaynaklı bir referans merkezidir.
-
-Bizler sadece kod yazmayız veya makine tasarlamayız; bizler **"sistemleri tasarlarız"**. Bu depo, sezgisel yönetimi reddedip yerine matematiksel modelleri, istatistiksel kalite kontrolü, zaman etütlerini ve veri odaklı süreç mimarisini koyan mühendislerin başvuru kaynağıdır. Temel amacımız: **Maksimum Verimlilik, Minimum İsraf (Muda).**
+## 📜 Manifesto ve Amacımız
+**Industrial-Engineering-Hub**, modern sistem tasarımı, optimizasyon ve veri odaklı yönetim prensiplerinin bir araya getirildiği bütünsel bir referans merkezidir. Bu ekosistem, karmaşık endüstriyel problemleri matematiksel modeller, istatistiksel araçlar ve ileri simülasyon teknikleri ile çözmeyi hedefler. Temel felsefemiz: **Sürekli İyileştirme (Kaizen) ve Maksimum Verimlilik.**
 
 ---
 
-## ⏳ Kısa Tarihçe: Kronometreden Algoritmalara Endüstriyel Evrim
-Endüstri Mühendisliği, insan emeğini ve makine gücünü uyum içinde çalıştırmak için verilen asırlık bir mücadelenin sonucudur. Disiplin, aşağıdaki dört devrimsel sıçramayla bugünkü halini almıştır:
+## 🏛️ Modül Mimarisi ve Külliyat
 
-* **1. Bilimsel Yönetim (1900'lerin Başı):** F.W. Taylor, elinde bir kronometreyle çelik işçilerini izleyerek *Zaman Etüdü'nü* icat etti. Küreklerin boyutunu optimize ederek verimliliği katladı. Hemen ardından Frank ve Lillian Gilbreth, tuğla dizen işçilerin el hareketlerini analiz ederek *Hareket Etüdü'nü* ve "Therblig" temel hareket birimlerini yarattılar. Amaç basitti: En az enerjiyle en çok iş.
-* **2. Seri Üretim ve Montaj Hattı (1913):** Henry Ford, otomobil üretimini hareketli bantlara taşıyarak üretim süresini günlerden saatlere indirdi. Bu, modern üretim planlamasının ve hat dengelemenin (Line Balancing) doğuşuydu.
-* **3. Kalite Devrimi ve Yalın Üretim (1950'ler - 80'ler):** W. Edwards Deming, II. Dünya Savaşı sonrası yıkılmış Japonya'ya giderek *İstatistiksel Kalite Kontrol* kavramını öğretti. Toyota'dan Taiichi Ohno, "Sadece Gerektiği Kadar" (Just-in-Time) ve Kanban sistemlerini geliştirerek efsanevi **Toyota Üretim Sistemi'ni (TPS)** kurdu. Dünyanın "Yalın (Lean)" kavramıyla tanıması böyle oldu.
-* **4. Sistemler ve Endüstri 4.0 (Günümüz):** Artık kronometrelerin yerini IoT sensörleri, zaman etütlerinin yerini Büyük Veri (Big Data) ve üretim planlarının yerini Dijital İkizler (Digital Twins) ve Yapay Zeka aldı. Ancak temel felsefe aynı: **Sistemi optimize et.**
+Bu depo, bir endüstri mühendisinin ihtiyaç duyacağı tüm kritik alanları bir "Masterclass" derinliğinde kapsar:
 
----
+### 0️⃣ FAZ 0: Yöneylem Araştırması (Foundation)
+* **LP ve Simplex:** Kısıtlı optimizasyonun matematiksel temelleri.
+* **Ağ Optimizasyonu:** Lojistik ağ tasarımı, en kısa yol ve maksimum akış problemleri.
 
-## 📈 Temel Denklem ve Yaklaşım
-Endüstri mühendisliği, fiziğin kanunlarını işletme bilimiyle birleştirir. Temel hedef fonksiyonumuz şudur:
+### 🟢 FAZ 1: İş Etüdü ve Ergonomi
+* **Metot Mühendisliği:** Değer katmayan adımların (Muda) yok edilmesi ve standart iş tasarımı.
+* **Rating & Allowance:** Performans derecelendirme ve endüstriyel tolerans rehberleri.
 
-$$\max \quad \text{Sistem Verimliliği} = f(\text{İnsan}, \text{Makine}, \text{Malzeme}, \text{Bilgi}, \text{Sermaye})$$
-$$\text{Kısıtlar:} \quad \text{Zaman, Maliyet, Kalite Standartları, Ergonomi ve Güvenlik}$$
+### 🔵 FAZ 2: Üretim Planlama ve Kontrol (PPC)
+* **Talep Tahmini:** İleri zaman serisi analizleri ve tahmin motoru (Python).
+* **EOQ & Stok:** Stok maliyet minimizasyonu ve yeniden sipariş noktası optimizasyonu.
 
----
+### 🟠 FAZ 3: Kalite Mühendisliği (Six Sigma)
+* **SPC & Standartlar:** İstatistiksel süreç kontrol tabloları ve kontrol grafikleri.
+* **Proses Yeteneği:** Cp, Cpk analizleri ile süreç olgunluk ölçümü.
 
-## 🏛️ Kapsamlı Müfredat ve Modül Mimarisi
+### 🚚 FAZ 4: Lojistik ve Tesis Planlama
+* **Yer Seçimi:** Ağırlık merkezi ve AHP temelli tesis lokasyon modelleri.
+* **Hat Dengeleme:** Montaj hattı optimizasyonu ve çevrim süresi yönetimi.
 
-Bu külliyat, bir sistemin mikro (tek bir işçinin hareketi) seviyesinden makro (küresel tedarik zinciri) seviyesine kadar incelenmesini sağlayan 5 ana modülden oluşur:
-
-### 🔬 FAZ 1: İş Etüdü ve Ergonomi (Mikro Optimizasyon)
-* **Zaman ve Hareket Etüdü:** Standart zaman hesaplamaları, performans değerlendirme (Rating), toleranslar (Allowances).
-* **Metot Mühendisliği:** Süreç şemaları (İş akışı, İnsan-Makine şemaları), değer katmayan adımların (Muda) yok edilmesi.
-* **Ergonomi:** Bilişsel ve fiziksel iş yükü analizi, NIOSH kaldırma denklemi, antropometri ve yorgunluk yönetimi.
-
-### 🏭 FAZ 2: Üretim Planlama ve Kontrol (PPC)
-* **Talep Tahmini (Forecasting):** Zaman serisi analizleri, hareketli ortalamalar, üstel düzeltme (Exponential Smoothing).
-* **Envanter (Stok) Modelleri:** Ekonomik Sipariş Miktarı (EOQ), Güvenlik Stoğu (Safety Stock), ABC Analizi.
-* **Üretim Çizelgeleme:** MRP (Malzeme İhtiyaç Planlaması), ERP mimarileri, atölye çizelgeleme (Job-Shop Scheduling) ve Johnson Algoritması.
-
-### 📉 FAZ 3: Kalite Mühendisliği ve Yönetimi
-* **İstatistiksel Süreç Kontrol (SPC):** Kontrol grafikleri (X-bar, R, p, c chart), süreç yeteneği analizi (Cp, Cpk).
-* **Altı Sigma (Six Sigma):** DMAIC (Tanımla, Ölç, Analiz Et, İyileştir, Kontrol Et) metodolojisi ve varyasyon azaltma.
-* **Kalite Araçları:** Ishikawa (Kılçık) diyagramı, Pareto analizi, FMEA (Hata Türleri ve Etkileri Analizi).
-
-### 🚚 FAZ 4: Tesis Planlama ve Lojistik Ağ Tasarımı
-* **Tesis Yer Seçimi (Facility Location):** Ağırlık merkezi yöntemi, çok ölçütlü karar verme (AHP).
-* **Tesis İçi Yerleşim (Layout):** Hücresel üretim, hat dengeleme (Line Balancing), CRAFT algoritmaları ve malzeme taşıma sistemleri.
-* **Tedarik Zinciri Yönetimi (SCM):** Kamçı etkisi (Bullwhip effect), lojistik ağ optimizasyonu ve tersine lojistik (Reverse Logistics).
-
-### 🎲 FAZ 5: Simülasyon ve Sistem Modelleme
-* Gerçek dünyada denemenin çok pahalı olduğu sistemlerin bilgisayar ortamında modellenmesi.
-* Kesikli Olay Simülasyonu (Discrete Event Simulation - DES).
-* Monte Carlo uygulamaları ve "Ya Öyle Olursa (What-if)" analizleri.
+### 🎲 FAZ 5: Simülasyon ve Risk Analizi
+* **DES (SimPy):** Fabrika akış modellerinin dijital ikizi.
+* **Monte Carlo:** Kar/zarar ve proje süreleri için olasılıksal risk analizi.
 
 ---
 
-## 🛠️ Kullanılan Teknolojiler ve Yazılım Stoku
-Endüstri Mühendisliğinin modern araç kutusu, veri bilimciler ve sistem mimarları ile büyük ölçüde örtüşür:
-
-* **Veri Analizi ve İstatistik:** `Python (Pandas, NumPy, SciPy)`, `R`, Minitab.
-* **Simülasyon:** `SimPy` (Python), AnyLogic, Arena.
-* **Optimizasyon:** `PuLP`, `Gurobi`, `OR-Tools`.
-* **Görselleştirme ve İş Zekası (BI):** PowerBI, Tableau, `Matplotlib`.
-* **Tasarım ve Çizim:** AutoCAD (Tesis yerleşimi için).
-
----
-
-## 📂 Depo Hiyerarşisi (Project Directory Structure)
+## 📂 Depo Hiyerarşisi (Directory Structure)
 
 ```text
 Industrial-Engineering-Hub/
 │
-├── 01_Work_Study_and_Ergonomics/      # İş Etüdü, Zaman Etüdü, Ergonomi Modülleri
-│   ├── README.md                      # Metot mühendisliği ve ergonomi dokümantasyonu
-│   └── time_study_standardizer.py     # Standart zaman ve tolerans hesaplayıcı
+├── 00_Operations_Research/            # Optimizasyon ve Matematiksel Modeller
+│   ├── linear_programming_and_simplex.md
+│   ├── simplex_solver_utils.py
+│   └── network_optimization_models.md
 │
-├── 02_Production_Planning/            # Üretim Planlama, Stok Yönetimi, MRP
-│   ├── README.md                      # PPC ve stok yönetimi prensipleri
-│   ├── inventory_eoq_calculator.py    # EOQ ve ROP Optimizasyon aracı
-│   └── mrp_engine.py                  # Malzeme İhtiyaç Planlaması (MRP) motoru
+├── 01_Work_Study_and_Ergonomics/      # İş Etüdü ve İnsan Faktörleri
+│   ├── method_engineering_principles.md
+│   └── rating_allowance_reference.md
 │
-├── 03_Quality_Control/                # Kalite Kontrol, Altı Sigma, SPC
-│   ├── README.md                      # Toplam Kalite Yönetimi ve SPC teorisi
-│   └── sqc_control_charts.py          # İstatistiksel süreç kontrol grafikleri jeneratörü
+├── 02_Production_Planning/            # Üretim Planlama ve Stok
+│   ├── forecasting_engine.py
+│   ├── advanced_forecasting_methods.md
+│   ├── inventory_eoq_calculator.py
+│   └── mrp_logic_explanation.md
 │
-├── 04_Facility_and_Supply_Chain/      # Tesis Yerleşimi ve Lojistik
-│   ├── README.md                      # Tesis planlama ve lojistik ağ teorisi
-│   ├── assembly_line_balancing.py     # Montaj hattı dengeleme algoritması
-│   └── logistics_optimizer.py         # Lojistik ve taşıma optimizasyon çözücü
+├── 03_Quality_Control/                # İstatistiksel Kalite ve Altı Sigma
+│   ├── spc_statistical_tables.md
+│   ├── capability_analysis_guide.md
+│   └── six_sigma_dmaic_guide.md
 │
-├── 05_Simulation/                     # Kesikli Olay ve Monte Carlo Simülasyonları
-│   ├── README.md                      # Simülasyon teorisi ve sistem modelleme
-│   ├── simpy_factory_model.py         # Fabrika üretim hattı SimPy modeli
-│   └── monte_carlo_risk.py            # Proje risk ve PERT simülasyonu
+├── 04_Facility_and_Supply_Chain/      # Tesis Tasarımı ve Lojistik
+│   ├── assembly_line_balancing.py
+│   └── facility_location_models.md
+│
+├── 05_Simulation/                     # Sistem Modelleme ve Risk
+│   ├── monte_carlo_risk_analysis.md
+│   └── simpy_factory_model.py
+│
+├── 06_Engineering_Economics/          # Finansal Karar Analizi
+│   └── financial_models_guide.md
+│
+├── 07_Project_Management/             # Planlama ve Ağ Analizi
+│   └── cpm_pert_analysis.md
 │
 ├── data/                              # Örnek üretim ve talep veri setleri
 ├── requirements.txt                   # Python bağımlılıkları
-└── README.md                          # Ana dokümantasyon (Burası)
+└── README.md
 ```
 
 ---
 
-## 📚 Referanslar ve İleri Okuma
-1. *Groover, M. P. (2007).* Work Systems: The Methods, Measurement & Management of Work.
-2. *Montgomery, D. C. (2012).* Introduction to Statistical Quality Control.
-3. *Vollmann, T. E., Berry, W. L. (2004).* Manufacturing Planning and Control Systems.
-4. *Tompkins, J. A., et al. (2010).* Facilities Planning.
+## 🛠️ Yazılım Stoku
+* **Diller:** Python, R.
+* **Kütüphaneler:** `SciPy` (Opt), `Pandas` (Data), `SimPy` (Sim), `PuLP` (LP), `Plotly` (Viz).
+
+---
+
+## 🚀 Horizon 2025: Endüstriyel Zekaya Doğru
+Gelecek sürümlerde bu HUB; otonom tedarik zinciri ajanları, AI destekli çizelgeleme motorları ve IIoT veri hatlarının simülasyonu ile daha da derinleşecektir.
 
 ---
 *Mükemmel sistem yoktur, her zaman optimize edilecek bir adım daha vardır.*
