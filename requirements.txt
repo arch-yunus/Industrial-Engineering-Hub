@@ -4,6 +4,9 @@ numpy>=1.24.0
 pandas>=2.0.0
 scipy>=1.10.0
 
+# AI & Machine Learning
+scikit-learn>=1.2.0
+
 # Simulation & Systems Modeling
 simpy>=4.0.1
 
