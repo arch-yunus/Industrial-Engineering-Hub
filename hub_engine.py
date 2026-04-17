@@ -35,6 +35,7 @@ def main_menu():
         print(" [9] 🏮 Yalın Üretim & TPS (Kanban)")
         print(" [10]💰 Mühendislik Ekonomisi (NPV/Finans)")
         print(" [11]🛠️ Güvenilirlik & Bakım Yönetimi")
+        print(" [12]⏱️ Proje Yönetimi (CPM/PERT)")
         print(" [Q] ❌ Çıkış")
         print("-" * 56)
         
@@ -60,13 +61,15 @@ def main_menu():
         elif choice == '7':
             run_tool('07_System_Dynamics_and_Complexity/bullwhip_simulator.py')
         elif choice == '8':
-            run_tool('02_Production_Planning/ai_demand_forecaster.py')
+            run_tool('08_Intelligence_and_Analytics/predictive_maintenance.py')
         elif choice == '9':
             run_tool('09_Lean_Manufacturing/kanban_calculator.py')
         elif choice == '10':
             run_tool('10_Engineering_Economics/investment_appraisal.py')
         elif choice == '11':
             run_tool('11_Reliability_and_Maintenance/system_reliability_calc.py')
+        elif choice == '12':
+            run_tool('12_Project_Management/cpm_pert_calculator.py')
         else:
             input("Geçersiz seçim. Devam etmek için Enter'a basın...")
 

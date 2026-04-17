@@ -46,27 +46,27 @@ Bu depo, bir endüstri mühendisinin ihtiyaç duyacağı tüm kritik alanları b
 * **DES (SimPy):** Fabrika akış modellerinin dijital ikizi.
 * **Monte Carlo:** Kar/zarar ve proje süreleri için olasılıksal risk analizi.
 
-### 💰 FAZ 6: Mühendislik Ekonomisi
+### 🧠 FAZ 6: Karar Bilimi (Decision Science)
+* **Çok Kriterli Karar Verme:** AHP, TOPSIS algoritmaları.
+
+### 🌀 FAZ 7: Sistem Dinamiği ve Karmaşıklık
+* **Kamçı Etkisi (Bullwhip):** Geri besleme döngüleri ve tedarik davranış modelleri.
+
+### 🛰️ FAZ 8: Endüstriyel Zeka ve Analitik
+* **Kestirimci Bakım:** RUL (Remaining Useful Life) tahminleme.
+
+### 🏭 FAZ 9: Yalın Üretim
+* **Kanban ve OEE:** Ekipman etkinlik ve çekme sistemleri.
+
+### 💰 FAZ 10: Mühendislik Ekonomisi
 * **Yatırım Analizleri:** NPV, IRR hesaplamaları.
 * **Paranın Zaman Değeri:** Kârlılık simülasyonları.
 
-### ⚖️ FAZ 7: Karar Bilimi (Decision Science)
-* **Çok Kriterli Karar Verme:** AHP, TOPSIS algoritmaları.
-
-### 📅 FAZ 8: Proje Yönetimi
-* **Kritik Yol Metodu:** CPM, PERT ağ analizi ve süre optimizasyonu.
-
-### 🌀 FAZ 9: Sistem Dinamiği ve Karmaşıklık
-* **Kamçı Etkisi (Bullwhip):** Geri besleme döngüleri ve tedarik davranış modelleri.
-
-### 🧠 FAZ 10: Endüstriyel Zeka ve Analitik
-* **Kestirimci Bakım:** RUL (Remaining Useful Life) tahminleme.
-
-### 🏭 FAZ 11: Yalın Üretim
-* **Kanban ve OEE:** Ekipman etkinlik ve çekme sistemleri.
-
-### 🔧 FAZ 12: Güvenilirlik ve Bakım
+### 🔧 FAZ 11: Güvenilirlik ve Bakım
 * **Sistem Güvenilirliği:** Seri/paralel sistem arıza hesaplamaları.
+
+### 📅 FAZ 12: Proje Yönetimi
+* **Kritik Yol Metodu:** CPM, PERT ağ analizi ve süre optimizasyonu.
 
 ---
 
@@ -81,13 +81,13 @@ Industrial-Engineering-Hub/
 ├── 03_Quality_Control/                # İstatistiksel Kalite ve Altı Sigma
 ├── 04_Facility_and_Supply_Chain/      # Tesis Tasarımı ve Lojistik
 ├── 05_Simulation/                     # Sistem Modelleme ve Risk
-├── 06_Engineering_Economics/          # Finansal Karar Analizi
-├── 07_Decision_Science/               # Çok Kriterli Karar Verme (AHP, TOPSIS)
-├── 08_Project_Management/             # CPM ve Ağ Analizi
-├── 09_System_Dynamics_and_Complexity/ # Karmaşıklık ve Sistem Davranışları
-├── 10_Intelligence_and_Analytics/     # Kestirimci Bakım ve Endüstriyel Analitik
-├── 11_Lean_Manufacturing/             # Kanban ve OEE Modelleri
-├── 12_Reliability_and_Maintenance/    # Sistem Güvenilirliği Analizi
+├── 06_Decision_Science/               # Karar Bilimi (AHP, TOPSIS)
+├── 07_System_Dynamics_and_Complexity/ # Sistem Dinamiği ve Kamçı Etkisi
+├── 08_Intelligence_and_Analytics/     # Endüstriyel Veri Analitiği
+├── 09_Lean_Manufacturing/             # Yalın Üretim (Kanban)
+├── 10_Engineering_Economics/          # Mühendislik Ekonomisi
+├── 11_Reliability_and_Maintenance/    # Güvenilirlik Analizleri
+├── 12_Project_Management/             # CPM ve PERT Analizi
 │
 ├── data/                              # Örnek üretim ve talep veri setleri
 ├── assets/                            # Banner ve görseller

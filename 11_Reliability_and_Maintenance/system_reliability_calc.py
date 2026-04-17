@@ -1,36 +1,60 @@
-import numpy as np
+"""
+🛠️ Industrial-Engineering-Hub: Reliability Engineering Tool
+System Reliability Calculator (Series and Parallel Configurations)
+"""
 
-def calculate_reliability():
-    print("="*50)
-    print("🛠️ SİSTEM GÜVENİLİRLİĞİ (RELIABILITY) HESAPLAYICI")
-    print("="*50)
-    print("Bileşenlerin güvenilirlik oranlarına (R) göre Seri veya Paralel sistem hesaplaması yapar.\n")
+import math
+
+class ReliabilityCalculator:
+    @staticmethod
+    def series_reliability(reliabilities):
+        """
+        Rs = R1 * R2 * ... * Rn
+        """
+        result = 1.0
+        for r in reliabilities:
+            result *= r
+        return result
+
+    @staticmethod
+    def parallel_reliability(reliabilities):
+        """
+        Rp = 1 - [(1 - R1) * (1 - R2) * ... * (1 - Rn)]
+        """
+        failure_prob = 1.0
+        for r in reliabilities:
+            failure_prob *= (1 - r)
+        return 1 - failure_prob
+
+def main():
+    print("--- ⚙️ Endüstri Mühendisliği Karar Destek Sistemi: Güvenilirlik Analizi ---")
+    
     try:
-        sys_type = input("Sistem Tipi (Seri için 'S', Paralel için 'P'): ").strip().upper()
-        reliabilities_str = input("Bileşen Güvenilirlik Değerleri (0-1 arası, virgülle ayrılmış, ör: 0.95,0.85,0.90): ")
+        print("\n [1] Seri Sistem (En zayıf halka kadar güçlüdür)")
+        print(" [2] Paralel Sistem (Yedeklemeli/Redundant)")
+        choice = input("Sistem tipini seçin: ")
         
-        R_list = [float(x) for x in reliabilities_str.split(',')]
+        rels_input = input("Bileşen güvenilirlik olasılıklarını virgülle ayırarak giriniz (0-1 arası): ")
+        rels = [float(r.strip()) for r in rels_input.split(',')]
         
-        for r in R_list:
-            if not (0 <= r <= 1):
-                print(f"Hata: Güvenilirlik değeri {r} aralık dışında (0 ile 1 arasında olmalı).")
-                return
-                
-        if sys_type == 'S':
-            # Series: R_sys = R1 * R2 * ... * Rn
-            R_sys = np.prod(R_list)
-            print("\n--- SERİ SİSTEM SONUCU ---")
-            print(f"⚙️ Tüm bileşenlerin çalışmasına bağımlı sistem güvenilirliği: {R_sys:.4f} ({R_sys*100:.2f}%)")
-        elif sys_type == 'P':
-            # Parallel: R_sys = 1 - ((1-R1)*(1-R2)*...*(1-Rn))
-            fail_probs = [1 - r for r in R_list]
-            R_sys = 1 - np.prod(fail_probs)
-            print("\n--- PARALEL SİSTEM SONUCU ---")
-            print(f"🛡️ Yedekli sistem (Redundancy) güvenilirliği: {R_sys:.4f} ({R_sys*100:.2f}%)")
+        calc = ReliabilityCalculator()
+        
+        if choice == '1':
+            res = calc.series_reliability(rels)
+            sys_type = "Seri"
         else:
-            print("Tanımsız sistem tipi. Lütfen 'S' veya 'P' giriniz.")
-    except Exception as e:
-        print("Hata:", str(e))
+            res = calc.parallel_reliability(rels)
+            sys_type = "Paralel"
+            
+        print("\n" + "="*50)
+        print(f"📊 SİSTEM GÜVENİLİRLİK ANALİZİ ({sys_type}):")
+        print(f"🔹 Bileşen Sayısı: {len(rels)}")
+        print(f"🔹 Toplam Sistem Güvenilirliği R(s): {res:.4f}")
+        print(f"🔹 Sistem Arıza Olasılığı Q(s): {1 - res:.4f}")
+        print("="*50)
+        
+    except ValueError:
+        print("🛑 Hata: Lütfen geçerli sayısal değerler giriniz.")
 
 if __name__ == "__main__":
-    calculate_reliability()
+    main()

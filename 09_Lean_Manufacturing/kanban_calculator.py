@@ -1,25 +1,49 @@
+"""
+🏮 Industrial-Engineering-Hub: Lean Manufacturing Tool
+Kanban Card Count Calculator (JIT Production)
+"""
+
 import math
 
-def calculate_kanban_cards():
-    print("="*50)
-    print("🏮 KANBAN HESAPLAYICI (YALIN ÜRETİM)")
-    print("="*50)
+class KanbanCalculator:
+    def __init__(self, daily_demand, lead_time, container_size, safety_factor=0.1):
+        """
+        daily_demand: Average daily demand (units)
+        lead_time: Time to replenish (days)
+        container_size: Capacity of one container
+        safety_factor: Buffer for variability (default 10%)
+        """
+        self.d = daily_demand
+        self.l = lead_time
+        self.c = container_size
+        self.s = safety_factor
+
+    def calculate_n_cards(self):
+        # N = (D * L * (1 + S)) / C
+        n = (self.d * self.l * (1 + self.s)) / self.c
+        return math.ceil(n)
+
+def main():
+    print("--- ⚙️ Endüstri Mühendisliği Karar Destek Sistemi: Kanban Hesaplayıcı ---")
+    
     try:
-        daily_demand = float(input("Günlük Ortalama Talep (Adet): "))
-        lead_time = float(input("Tedarik/Üretim Süresi (Gün): "))
-        safety_stock_percent = float(input("Güvenlik Stoğu Yüzdesi (Örn: %10 için 10): ")) / 100
-        container_capacity = float(input("Bir Kutu/Kasanın Kapasitesi (Adet): "))
+        D = float(input("Günlük Ortalama Talep (adet/gün): "))
+        L = float(input("Tedarik Süresi / Bekleme Süresi (gün): "))
+        C = float(input("Bir Kasa/Konteyner Kapasitesi (adet): "))
+        S = float(input("Emniyet Faktörü (Ör: %15 için 0.15): ") or 0.1)
         
-        # Kanban Formula: K = (D * L * (1 + S)) / C
-        numerator = daily_demand * lead_time * (1 + safety_stock_percent)
-        kanban_cards = math.ceil(numerator / container_capacity)
+        calc = KanbanCalculator(D, L, C, S)
+        n_cards = calc.calculate_n_cards()
         
-        print("\n--- SONUÇLAR ---")
-        print(f"Toplam Gereken Parça Miktarı Dolaşımda: {numerator:.2f}")
-        print(f"📦 Gerekli KANBAN KART (Kutu) Sayısı: {kanban_cards}")
-        print("Sistem tavsiyesi: Yalın üretim için kart sayısını minimumda tutmak esastır.")
-    except Exception as e:
-        print("Hata: Girdiğiniz değerleri kontrol edin.")
+        print("\n" + "="*50)
+        print(f"📊 KANBAN ANALİZİ:")
+        print(f"🔹 Gereken Toplam Kanban Kartı Sayısı: {n_cards}")
+        print(f"🔹 Toplam Boruhattı Envanteri: {n_cards * C} adet")
+        print("="*50)
+        print("✅ Not: Her kart bir dolu konteyneri temsil eder. Kartların sisteme girmesiyle üretim başlar (Çekme Sistemi).")
+        
+    except ValueError:
+        print("🛑 Hata: Lütfen geçerli sayısal değerler giriniz.")
 
 if __name__ == "__main__":
-    calculate_kanban_cards()
+    main()
