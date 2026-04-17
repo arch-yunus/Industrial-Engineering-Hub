@@ -1,3 +1,9 @@
+<div align="center">
+  <img src="assets/banner.png" alt="Industrial Engineering Hub Banner" width="100%" />
+</div>
+
+<br>
+
 # Industrial-Engineering-Hub 🏭: Endüstriyel Karar Destek ve Optimizasyon Ekosistemi
 
 [![Discipline: Industrial Engineering](https://img.shields.io/badge/Discipline-Industrial%20Engineering-darkred.svg)]()
@@ -40,6 +46,28 @@ Bu depo, bir endüstri mühendisinin ihtiyaç duyacağı tüm kritik alanları b
 * **DES (SimPy):** Fabrika akış modellerinin dijital ikizi.
 * **Monte Carlo:** Kar/zarar ve proje süreleri için olasılıksal risk analizi.
 
+### 💰 FAZ 6: Mühendislik Ekonomisi
+* **Yatırım Analizleri:** NPV, IRR hesaplamaları.
+* **Paranın Zaman Değeri:** Kârlılık simülasyonları.
+
+### ⚖️ FAZ 7: Karar Bilimi (Decision Science)
+* **Çok Kriterli Karar Verme:** AHP, TOPSIS algoritmaları.
+
+### 📅 FAZ 8: Proje Yönetimi
+* **Kritik Yol Metodu:** CPM, PERT ağ analizi ve süre optimizasyonu.
+
+### 🌀 FAZ 9: Sistem Dinamiği ve Karmaşıklık
+* **Kamçı Etkisi (Bullwhip):** Geri besleme döngüleri ve tedarik davranış modelleri.
+
+### 🧠 FAZ 10: Endüstriyel Zeka ve Analitik
+* **Kestirimci Bakım:** RUL (Remaining Useful Life) tahminleme.
+
+### 🏭 FAZ 11: Yalın Üretim
+* **Kanban ve OEE:** Ekipman etkinlik ve çekme sistemleri.
+
+### 🔧 FAZ 12: Güvenilirlik ve Bakım
+* **Sistem Güvenilirliği:** Seri/paralel sistem arıza hesaplamaları.
+
 ---
 
 ## 📂 Depo Hiyerarşisi (Directory Structure)
@@ -48,40 +76,21 @@ Bu depo, bir endüstri mühendisinin ihtiyaç duyacağı tüm kritik alanları b
 Industrial-Engineering-Hub/
 │
 ├── 00_Operations_Research/            # Optimizasyon ve Matematiksel Modeller
-│   ├── linear_programming_and_simplex.md
-│   ├── simplex_solver_utils.py
-│   └── network_optimization_models.md
-│
 ├── 01_Work_Study_and_Ergonomics/      # İş Etüdü ve İnsan Faktörleri
-│   ├── method_engineering_principles.md
-│   └── rating_allowance_reference.md
-│
 ├── 02_Production_Planning/            # Üretim Planlama ve Stok
-│   ├── forecasting_engine.py
-│   ├── advanced_forecasting_methods.md
-│   ├── inventory_eoq_calculator.py
-│   └── mrp_logic_explanation.md
-│
 ├── 03_Quality_Control/                # İstatistiksel Kalite ve Altı Sigma
-│   ├── spc_statistical_tables.md
-│   ├── capability_analysis_guide.md
-│   └── six_sigma_dmaic_guide.md
-│
 ├── 04_Facility_and_Supply_Chain/      # Tesis Tasarımı ve Lojistik
-│   ├── assembly_line_balancing.py
-│   └── facility_location_models.md
-│
 ├── 05_Simulation/                     # Sistem Modelleme ve Risk
-│   ├── monte_carlo_risk_analysis.md
-│   └── simpy_factory_model.py
-│
 ├── 06_Engineering_Economics/          # Finansal Karar Analizi
-│   └── financial_models_guide.md
-│
-├── 07_Project_Management/             # Planlama ve Ağ Analizi
-│   └── cpm_pert_analysis.md
+├── 07_Decision_Science/               # Çok Kriterli Karar Verme (AHP, TOPSIS)
+├── 08_Project_Management/             # CPM ve Ağ Analizi
+├── 09_System_Dynamics_and_Complexity/ # Karmaşıklık ve Sistem Davranışları
+├── 10_Intelligence_and_Analytics/     # Kestirimci Bakım ve Endüstriyel Analitik
+├── 11_Lean_Manufacturing/             # Kanban ve OEE Modelleri
+├── 12_Reliability_and_Maintenance/    # Sistem Güvenilirliği Analizi
 │
 ├── data/                              # Örnek üretim ve talep veri setleri
+├── assets/                            # Banner ve görseller
 ├── requirements.txt                   # Python bağımlılıkları
 └── README.md
 ```
